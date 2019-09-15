@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1>Sample for multicolumn display
+
+        </h1>
+        <div class="column-width">
+        <strong>column-width:200px</strong> or <strong>column-count</strong>
+        <p>The multi-column layout module gives us a way to lay out content in columns, similar to how text flows in a newspaper. While reading up and down columns is less useful in a web context as you don’t want to force users to scroll up and down, arranging content into columns can be a useful technique.
+
+                To turn a block into a multicol container we use either the column-count property, which tells the browser how many columns we would like to have, or the column-width property, which tells the browser to fill the container with as many columns of at least that width.
+                
+                In the below example we start with a block of HTML inside a containing <div> element with a class of container.</p>
+
+                    <p>We are using a column-width of 200 pixels on that container, causing the browser to create as many 200-pixel columns as will fit in the container and then share the remaining space between the created columns.
+
+                            </p>
+        </div>
+    </body>
+</html>
+<style>
+.column-width{
+    /* column-width: 200px; */
+    column-count: 3;
+}</style>
