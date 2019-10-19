@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <body>
+    <div class="menu"></div>
+    <div class="slide-container">Welcome to my profile</div>
+    <div class="container">      
+    <div class="about">Menu </div>
+    <div class="Content">Content</div>
+    </div>
+
+      
+    
+  </body>
+</html>
+
+<style>
+
+/* Custom variables */
+    :root{
+        --mycolourcolor:red;
+        --mycolourcolor2:blue;
+    }
+
+    /* Default properitys */
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0; /* by default body element will have 8px margin */
+     box-sizing: content-box; /*safe way to handle the continer width */
+  }
+  .container {
+    display: flex;  
+    flex-direction: row; /*tells the container to align the item in row*/
+    justify-content: space-around;  /*calculate the remaining sapce in the row and split equally among the element as padding*/
+    
+
+  }
+  .menu{
+      height: 60px;
+      width: 100%;
+      background-color: lightskyblue;
+      border: 1px solid gray;
+      box-shadow: 10px 10px 10px 10px honeydew;
+  }
+  .slide-container{
+      height: 400px;
+      background-color: white;
+      border-bottom: 1px solid gray;
+      text-align: center;
+  }
+
+  .about{
+      height: 600px;
+       /* flex-grow/flex-shrink /flex-basis  
+      
+      single value with number specifies the flex-grow EX flex:1;
+      single value with %/PM/EM/REM specifies the width of the container which is flex-basis
+      double value will be flex-grow and fles-shrink.
+      three values as flex-grow/flex-shink/flex-basis
+      */
+      flex:30%;
+      padding: 10px;
+      border: 1px solid gray;
+  }
+  .Content{
+      height: 600px;
+      flex: 70%;
+
+      /*here the var() is function whcih helps to access the custom variables */
+      border: 1px solid var(--mycolourcolor2);
+      padding: 10px;
+  }
+
+/*@ media used to define the media query which helps to design the responsive screen*/
+@media (max-width:510px){
+    .container{
+        flex-direction: column;
+    }
+}
+</style>

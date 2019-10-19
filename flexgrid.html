@@ -1,0 +1,74 @@
+<html>
+  <body>
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="flex-container">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+      <div class="col">4</div>
+      <div class="col">3</div>
+      <div class="col">4</div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .navigation {
+    background: paleturquoise;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    min-height: 50px;
+    margin: 0;
+  }
+
+  .navigation a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+  }
+
+  @media (max-width: 800px) {
+    .navigation {
+      justify-content: space-evenly;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .navigation {
+      flex-flow: column wrap;
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    .navigation a {
+      text-align: center;
+      padding: 10px;
+      border-top: 1px solid rgb(red, green, blue);
+      border-bottom: 1px solid white;
+    }
+  }
+
+  .flex-container {
+    border: 1px solid red;
+    height: 300px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  .col {
+    height: 300px;
+    width: 320px;
+    border: 1px solid yellow;
+
+    background: orange;
+  }
+</style>
